@@ -6,11 +6,11 @@ const __ = undefined
  */
 
 test('What will satisfy the truthy assertion?', t => {
-  t.truthy(2)
+  t.truthy(1)
 })
 
 test('What is a falsey value?', t => {
-  t.falsy(!true)
+  t.falsy(false)
 })
 
 test('What is true?', t => {
@@ -18,7 +18,7 @@ test('What is true?', t => {
 })
 
 test('What is false?', t => {
-  t.false(false)
+  t.false(!true)
 })
 
 test('What will satisfy the equality assertion?', t => {
@@ -143,7 +143,7 @@ test('Are itegers and floats the same type?', t => {
 test('What is the javascript numeric type?', t => {
   const typeOfInteger = typeof 42
 
-  t.is(typeof 42, typeOfInteger)
+  t.is('number', typeOfInteger)
 })
 
 test('What is a integer number equivalent to 1.0?', t => {
@@ -284,7 +284,7 @@ test('What is indexing an array literal', t => {
 test('What is the type of an array?', t => {
   const typeOfArray = typeof []
 
-  t.is(typeof [], typeOfArray)
+  t.is('object', typeOfArray)
 })
 
 test('What is the length of of an array?', t => {
@@ -317,7 +317,7 @@ test('What are queue methods on arrays?', t => {
 test('What is the type of an object?', t => {
   const typeOfEmptyObject = typeof {}
 
-  t.is(typeof {}, typeOfEmptyObject)
+  t.is('object', typeOfEmptyObject)
 })
 
 test('What is object literal notation?', t => {
